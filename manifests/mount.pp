@@ -49,12 +49,12 @@
 # @param replace Set to false if you only want to place the file if it is missing.
 #
 define autofs::mount (
-  Stdlib::Absolutepath $mount             = $title,
+  String $mount             = $title,
   Integer $order                          = 1,
-  Optional[Variant[Stdlib::Absolutepath,Autofs::Mapentry]] $mapfile = undef,
+  Optional[String] $mapfile = undef,
   Optional[String] $options               = '',
-  Stdlib::Absolutepath $master            = '/etc/auto.master',
-  Stdlib::Absolutepath $map_dir           = '/etc/auto.master.d',
+  String $master            = '/etc/auto.master',
+  String $map_dir           = '/etc/auto.master.d',
   Boolean $use_dir                        = false,
   Boolean $direct                         = true,
   Boolean $execute                        = false,

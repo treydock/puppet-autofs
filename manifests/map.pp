@@ -25,7 +25,7 @@
 
 define autofs::map (
   Array $mapcontents,
-  Stdlib::Absolutepath $mapfile,
+  String $mapfile,
   Enum['autofs/auto.map.erb', 'autofs/auto.map.exec.erb'] $template = 'autofs/auto.map.erb',
   String $mapmode                                                   = '0644',
   Boolean $replace                                                  = true,
